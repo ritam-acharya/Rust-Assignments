@@ -9,5 +9,16 @@
 */
 
 pub fn classify_char(c: char) -> &'static str {
-    todo!()
+    let alphabets = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let numeric = "0123456789";
+    let whitespace = " \t\n";
+    if alphabets.contains(c) {
+      "alphabetic"
+    }else if numeric.contains(c) {
+      "numeric"
+    } else if whitespace.contains(c) {
+      "whitespace"
+    }else {
+      "other"
+    }
 }

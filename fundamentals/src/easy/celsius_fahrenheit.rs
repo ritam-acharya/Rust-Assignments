@@ -9,5 +9,8 @@
 */
 
 pub fn celsius_to_fahrenheit(c: f64) -> f64 {
-    todo!()
+    let multiply_factor: f64 = 9.0 / 5.0;
+    let left_part: f64 = c * multiply_factor;
+    let ans: f64 = left_part + 32.0;
+    ans 
 }

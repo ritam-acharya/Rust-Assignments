@@ -9,5 +9,14 @@
 */
 
 pub fn average(values: &[f64]) -> Option<f64> {
-    todo!()
+    if values.len() < 1 {
+      None
+    }else {
+      let mut ans = 0 as f64;
+      for val in values {
+        ans += *val;
+      }
+      let length = values.len() as f64;
+      Some(ans / length)
+    }
 }

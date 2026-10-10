@@ -9,5 +9,7 @@
 */
 
 pub fn apply_twice<F: Fn(i32) -> i32>(x: i32, f: F) -> i32 {
-    todo!()
+    let resp1 = f(x);
+    let resp2 = f(resp1);
+    resp2
 }

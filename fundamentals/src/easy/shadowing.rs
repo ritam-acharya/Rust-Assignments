@@ -9,5 +9,7 @@
 */
 
 pub fn shadow_transform(x: u32) -> String {
-    todo!()
+    let x = x * 2;
+    let x = x.to_string();
+    x
 }

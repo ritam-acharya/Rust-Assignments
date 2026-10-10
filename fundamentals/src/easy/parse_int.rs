@@ -9,5 +9,9 @@
 */
 
 pub fn parse_int(s: &str) -> Result<i32, String> {
-    todo!()
+    let resp = s.parse::<i32>();
+    match resp {
+      Ok(val) => Ok(val),
+      Err(_) => Err(String::from("Can't parse into i32 format"))
+    }
 }

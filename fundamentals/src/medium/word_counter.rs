@@ -12,5 +12,11 @@
 use std::collections::HashMap;
 
 pub fn word_count(text: &str) -> HashMap<String, usize> {
-    todo!()
+    let words: Vec<&str> = text.split_whitespace().collect();
+    let mut count_map: HashMap<String, usize> = HashMap::new();
+    for word in words {
+      let word = word.to_lowercase();
+      count_map.entry(word).and_modify(|count| *count += 1).or_insert(1);
+    }
+    count_map
 }

@@ -23,16 +23,16 @@ pub struct Square {
 
 impl Shape for Circle {
     fn area(&self) -> f64 {
-        todo!()
+        self.radius * self.radius * std::f64::consts::PI
     }
 }
 
 impl Shape for Square {
     fn area(&self) -> f64 {
-        todo!()
+        self.side * self.side
     }
 }
 
 pub fn print_area(shape: &dyn Shape) -> f64 {
-    todo!()
+    shape.area()
 }

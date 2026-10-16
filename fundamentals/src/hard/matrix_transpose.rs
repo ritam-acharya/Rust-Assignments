@@ -10,5 +10,21 @@
 */
 
 pub fn transpose(matrix: Vec<Vec<i32>>) -> Vec<Vec<i32>> {
-    todo!()
+    if matrix.is_empty() {
+        return matrix;
+    }
+
+    let cols = matrix[0].len();
+    let rows = matrix.len();
+    let mut ans: Vec<Vec<i32>> = Vec::new();
+
+    for col in 0..cols {
+        let mut new_row: Vec<i32> = Vec::new();
+        for row in 0..rows {
+            new_row.push(matrix[row][col]);
+        }
+        ans.push(new_row);
+    }
+
+    ans
 }
